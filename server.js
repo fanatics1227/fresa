@@ -176,26 +176,10 @@ message.react("😂")
       comandos.run(client, message, args);
       console.log(message.author.tag+" Uso el comando: "+message.content)
       
-            const embed = new Discord.RichEmbed()
-      .setAuthor('✅ Comando Utilizado', message.author.avatarURl)
-      .addField('Usuario:', message.author.username+ " ("+message.author.id+")")
-      .addField("Comando", message.content)
-      .addField("Canal:", message.channel.name+" ("+message.channel.id+")")
-      .addField('Servidor: ', message.guild.name + " ("+message.guild.id+")")
-      .setColor('00FF1F')
-      client.channels.get('563915525919473728').send(embed)
+
     } catch (e) {
       console.log(e.stack) 
-      let embed = new Discord.RichEmbed()
-      .setAuthor("Error ❌", message.author.avatarURL)
-       .addField('Usuario:', message.author.username+ " ("+message.author.id+")")
-      .addField("Comando", message.content)
-      .addField("Canal:", message.channel.name+" ("+message.channel.id+")")
-      .addField('Servidor: ', message.guild.name + " ("+message.guild.id+")")
-      .setColor('FF0000')
-      client.channels.get('563915632719167497').send(embed)
-       client.channels.get('563915632719167497').send("```js\n"+e.stack+"```")
-      message.channel.send("El Comando No Existe o Esta Dañado, Pon `"+prefix+"help` para ver los comandos")
+      message.channel.send("El comando no fue encontrado o esta dañado usa "+prefix+"help para ver los comandos")
       
     } finally {
 
