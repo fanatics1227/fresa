@@ -1,5 +1,4 @@
 dependencies:
-  axios: 0.18.0
   canvas: 2.5.0
   discord-economy: 1.1.6
   discord-gestor: 1.1.1
